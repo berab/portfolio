@@ -20,8 +20,9 @@ function App() {
      // while not scrolling at all
    }, [])
 
-  console.log(offsetY)
-  console.log('other',window.scrollY+window.innerHeight)
+   console.log(window.innerWidth)
+   console.log(window.pageYOffset)
+
   
   return (
     <>

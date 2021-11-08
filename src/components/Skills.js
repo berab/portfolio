@@ -7,22 +7,25 @@ function Skills(props) {
   const [slider, setSlider] = useState('aboutme');
 
   useEffect(() => {
-    if(props.offsetY >4800){
+    if (window.innerWidth < 768   && props.offsetY > 1450){
+      setSlider('aboutme-animation')
+    }
+    else if(props.offsetY >4800){
       setSlider('aboutme-animation ')
     }
    }, [props.offsetY, slider])
 
   const linkedinHandler = () => {
       var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-      window.open("http://www.linkedin.com/", "linkedin", windowFeatures);
+      window.open("https://www.linkedin.com/in/berankilic/", "linkedin", windowFeatures);
     }
   const xingHandler = () => {
     var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-    window.open("http://www.xing.com/", "xing", windowFeatures);
+    window.open("https://www.xing.com/profile/Renan_Kilic/", "xing", windowFeatures);
   }
   const gitHandler = () => {
     var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-    window.open("http://www.github.com/", "github", windowFeatures);
+    window.open("https://github.com/berab", "github", windowFeatures);
   }
 
     

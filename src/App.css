@@ -65,7 +65,7 @@ p{
    animation: slider 2s ease forwards;
 }
 
-@media (min-width: 640px) { 
+@media (min-width: 768px) { 
    .aboutme{
       font-size: 15rem;
    }

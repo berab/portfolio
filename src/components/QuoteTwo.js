@@ -4,9 +4,12 @@ function QuoteTwo(props) {
    const [slider, setSlider] = useState('');
 
    useEffect(() => {
-     if(props.offsetY > 3290){
-       setSlider('quote2')
-     }
+    if (window.innerWidth < 768   && props.offsetY > 775){
+      setSlider('quote1')
+    }
+    else if(props.offsetY > 3290){
+      setSlider('quote2')
+    }
     }, [props.offsetY, slider])
  
    return (  

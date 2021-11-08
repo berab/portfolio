@@ -4,11 +4,14 @@ function AboutMe(props) {
   const [slider, setSlider] = useState('aboutme');
 
   useEffect(() => {
-    if(props.offsetY > 320){
+    if (window.innerWidth < 768){
+      setSlider('aboutme-animation')
+    }
+    else if(props.offsetY > 320){
       setSlider('aboutme-animation')
     }
    }, [props.offsetY, slider])
-
+   
    return (
    <section>
     <div className='h-96 md:h-screen grid'>
